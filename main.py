@@ -16,8 +16,8 @@ def check_minecraft_server(ip):
         server = JavaServer.lookup(ip)
         status = server.status()
         return (ip, status.version.name)
-    except Exception as e:
-        print(f"IP: {ip} is not a valid Minecraft server. Error: {e}")
+    except:
+        print(f"IP: {ip} is not a valid Minecraft server.")
         return None
 
 def check_minecraft_servers(ips, max_workers):
